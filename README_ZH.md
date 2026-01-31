@@ -81,7 +81,6 @@ python run_i18n.py
 - 可使用撤销功能恢复操作
 - 建议在重要文件操作前先备份
 
-## Language / 语言
+## 其他语言
 
-- [中文文档](README_ZH.md)
 - [English Documentation](README.md)
