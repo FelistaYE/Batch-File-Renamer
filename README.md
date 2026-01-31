@@ -30,9 +30,6 @@ A batch file renaming tool with a complete graphical interface.
 git clone https://github.com/yourusername/batch-renamer.git
 cd batch-renamer
 
-# Install dependencies
-pip install -r requirements.txt
-
 # Run the program
 python run.py
 ```

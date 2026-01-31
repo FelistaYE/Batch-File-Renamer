@@ -31,9 +31,6 @@
 git clone https://github.com/yourusername/Batch-File-Renamer.git
 cd Batch-File-Renamer
 
-# 安装依赖
-pip install -r requirements.txt
-
 # 运行程序
 python -m renamer.gui
 ```
