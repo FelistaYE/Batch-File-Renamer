@@ -27,11 +27,11 @@ A batch file renaming tool with a complete graphical interface.
 
 ```bash
 # Clone the project
-git clone https://github.com/yourusername/batch-renamer.git
-cd batch-renamer
+git clone https://github.com/FelistaYE/Batch-File-Renamer.git
+cd Batch-File-Renamer
 
 # Run the program
-python run.py
+python run_i18n.py
 ```
 
 
