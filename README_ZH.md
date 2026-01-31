@@ -28,11 +28,11 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/yourusername/Batch-File-Renamer.git
+git clone https://github.com/FelistaYE/Batch-File-Renamer.git
 cd Batch-File-Renamer
 
 # 运行程序
-python -m renamer.gui
+python run_i18n.py
 ```
 
 
