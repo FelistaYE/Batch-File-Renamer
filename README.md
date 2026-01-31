@@ -34,7 +34,6 @@ cd Batch-File-Renamer
 python run_i18n.py
 ```
 
-
 ## Usage
 
 1. Launch the program and click "Select Directory" to choose the folder
@@ -79,7 +78,6 @@ python run_i18n.py
 - Undo feature available for recent operations
 - Backup important files before batch operations
 
-## Language / 语言
+## Other Language
 
 - [中文文档](README_ZH.md)
-- [English Documentation](README.md)
