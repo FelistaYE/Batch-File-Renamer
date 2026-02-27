@@ -271,7 +271,6 @@ class BatchRenamerGUI:
             (get_text('mode_case', self.lang), "case"),
             (get_text('mode_datetime', self.lang), "datetime"),
             (get_text('mode_remove', self.lang), "remove"),
-            (get_text('mode_insert', self.lang), "insert"),
         ]
         
         ttk.Label(scrollable_frame, text=get_text('rename_mode', self.lang), font=('Arial', 10, 'bold')).pack(anchor=tk.W, pady=(0, 5))
@@ -295,7 +294,6 @@ class BatchRenamerGUI:
         self.create_case_options(scrollable_frame)
         self.create_datetime_options(scrollable_frame)
         self.create_remove_options(scrollable_frame)
-        self.create_insert_options(scrollable_frame)
         
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
@@ -475,33 +473,6 @@ class BatchRenamerGUI:
         self.remove_custom = ttk.Entry(self.remove_frame, width=35)
         self.remove_custom.pack(anchor=tk.W, pady=2)
     
-    def create_insert_options(self, parent):
-        """创建插入文本选项 - Create insert options"""
-        self.insert_frame = ttk.LabelFrame(parent, text=get_text('insert_settings', self.lang), padding=10)
-        
-        ttk.Label(self.insert_frame, text=get_text('insert_text', self.lang)).grid(row=0, column=0, sticky=tk.W, pady=5)
-        self.insert_text = ttk.Entry(self.insert_frame, width=30)
-        self.insert_text.grid(row=0, column=1, pady=5)
-        
-        ttk.Label(self.insert_frame, text=get_text('insert_position', self.lang)).grid(row=1, column=0, sticky=tk.W, pady=5)
-        self.insert_position = tk.IntVar(value=0)
-        position_frame = ttk.Frame(self.insert_frame)
-        position_frame.grid(row=1, column=1, pady=5, sticky=tk.W)
-        
-        ttk.Radiobutton(
-            position_frame,
-            text=get_text('position_start', self.lang),
-            variable=self.insert_position,
-            value=0
-        ).pack(side=tk.LEFT)
-        
-        ttk.Radiobutton(
-            position_frame,
-            text=get_text('position_end', self.lang),
-            variable=self.insert_position,
-            value=-1
-        ).pack(side=tk.LEFT)
-    
     def create_statusbar(self):
         """创建底部状态栏 - Create status bar"""
         self.statusbar = ttk.Label(
@@ -517,7 +488,7 @@ class BatchRenamerGUI:
         # 隐藏所有选项框
         for frame in [self.prefix_frame, self.suffix_frame, self.replace_frame,
                      self.number_frame, self.case_frame, self.datetime_frame,
-                     self.remove_frame, self.insert_frame]:
+                     self.remove_frame]:
             frame.pack_forget()
         
         # 显示当前模式的选项框
@@ -536,8 +507,6 @@ class BatchRenamerGUI:
             self.datetime_frame.pack(fill=tk.X, pady=5)
         elif mode == "remove":
             self.remove_frame.pack(fill=tk.X, pady=5)
-        elif mode == "insert":
-            self.insert_frame.pack(fill=tk.X, pady=5)
     
     def select_directory(self):
         """选择目录 - Select directory"""
@@ -645,12 +614,6 @@ class BatchRenamerGUI:
                     "custom_chars": self.remove_custom.get()
                 }
                 
-            elif mode == "insert":
-                rename_func = patterns.insert_text
-                kwargs = {
-                    "text": self.insert_text.get(),
-                    "position": self.insert_position.get()
-                }
             else:
                 messagebox.showerror(
                     get_text('error', self.lang), 
