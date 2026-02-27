@@ -41,7 +41,6 @@ TRANSLATIONS = {
         'mode_case': 'Case Conversion',
         'mode_datetime': 'Date/Time',
         'mode_remove': 'Remove Characters',
-        'mode_insert': 'Insert Text',
         
         # Prefix options
         'prefix_settings': 'Prefix Settings',
@@ -82,13 +81,6 @@ TRANSLATIONS = {
         'remove_spaces': 'Remove All Spaces',
         'remove_special': 'Remove Special Characters',
         'custom_remove': 'Custom Characters to Remove:',
-        
-        # Insert options
-        'insert_settings': 'Insert Text Settings',
-        'insert_text': 'Text to Insert:',
-        'insert_position': 'Position:',
-        'position_start': 'Start',
-        'position_end': 'End',
         
         # Status messages
         'status_ready': 'Ready',
@@ -139,7 +131,6 @@ Rename Modes:
   • Case Conversion: Convert filename case
   • Date/Time: Name using file timestamp
   • Remove Characters: Remove spaces, special chars
-  • Insert Text: Insert text at position
 
 Usage Steps:
   1. Click "Select Directory"
@@ -187,7 +178,6 @@ Notes:
         'mode_case': '大小写转换',
         'mode_datetime': '日期时间',
         'mode_remove': '删除字符',
-        'mode_insert': '插入文本',
         
         # Prefix options
         'prefix_settings': '前缀设置',
@@ -228,13 +218,6 @@ Notes:
         'remove_spaces': '删除所有空格',
         'remove_special': '删除特殊字符',
         'custom_remove': '自定义删除字符:',
-        
-        # Insert options
-        'insert_settings': '插入文本设置',
-        'insert_text': '插入文本:',
-        'insert_position': '插入位置:',
-        'position_start': '开头',
-        'position_end': '结尾',
         
         # Status messages
         'status_ready': '就绪',
@@ -285,7 +268,6 @@ Notes:
   • 大小写转换: 转换文件名的大小写
   • 日期时间: 使用文件时间戳命名
   • 删除字符: 删除空格、特殊字符等
-  • 插入文本: 在指定位置插入文本
 
 使用步骤:
   1. 点击"选择目录"选择要处理的文件夹
